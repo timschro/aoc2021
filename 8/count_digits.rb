@@ -1,6 +1,6 @@
 #part 1
 🧐=0
-File.readlines("input.txt").each { |r| 🧐 += r.split('|')[1].strip.split.map{|e| e.length}.reject{|e| ![2,4,3,7].include?(e)}.length }
+File.readlines("input.txt").each { |r| 🧐 += r.split('|')[1].strip.split.map{|e| e.length}.select{|e| [2,4,3,7].include?(e)}.length }
 p 🧐
 
 
